@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackOffice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/styleBO.css">
+</head>
+<body>
+    <h1 class="text-center mt-5">AGGIUNGI NUOVI PRODOTTI</h1>
+    
+    <div class="mb-3 mt-3">
+      <input type="text" class="form-control barraRicerca" placeholder="Name" id="name" name="name">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control barraRicerca" placeholder="Description" id="description" name="description">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control barraRicerca" placeholder="Brand" id="brand" name="brand">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control barraRicerca" placeholder="ImageUrl" id="imgUrl" name="imgUrl">
+    </div>
+    <div class="mb-3">
+      <input type="number" class="form-control barraRicerca" placeholder="Price" id="price" name="price">
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary mb-3" onclick="aggiungi()">Crea Prodotto</button>
+    </div>
+
+    <div id="container">
+        
+    </div>
+    
+    <div class="modal" tabindex="-1" id="delete-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-warning">
+            <h5 class="modal-title text-danger">ATTENTION!!! YOU ARE DELETING A PRODUCT!!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeModal()"></button>
+          </div>
+          <div class="modal-body">
+            <p>The elimination of the product will be permanent.</p>
+          </div>
+          <div class="modal-footer" >
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeModal()">Close</button>
+            <div id="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modify-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            <h5 class="modal-title text-success">PRODUCT CHANGE</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeModal()"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 mt-3">
+              <label for="name_mod">Name</label>
+              <input type="text" class="form-control barraRicerca" id="name_mod" name="name_mod">
+              <input type="text" name="id_mod" id="id_mod" class="d-none">
+            </div>
+            <div class="mb-3">
+              <label for="description_mod">Description</label>
+              <input type="text" class="form-control barraRicerca" id="description_mod" name="description_mod">
+            </div>
+            <div class="mb-3">
+              <label for="brand_mod">Brand</label>
+              <input type="text" class="form-control barraRicerca" id="brand_mod" name="brand_mod">
+            </div>
+            <div class="mb-3">
+              <label for="imgUrl_mod">ImgUrl</label>
+              <input type="text" class="form-control barraRicerca" id="imgUrl_mod" name="imgUrl_mod">
+            </div>
+            <div class="mb-3">
+              <label for="price_mod">Price</label>
+              <input type="number" class="form-control barraRicerca" id="price_mod" name="price_mod">
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary mb-3" onclick="confermaModifica()">Modifica Prodotto</button>
+            </div>
+          </div>
+          <div class="modal-footer bg-info" >
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="closeModal()">Close</button>
+            <div id="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="overlay d-none" id="overlay">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/assets/scriptBO.js"></script>
+</body>
+</html>

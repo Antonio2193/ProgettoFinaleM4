@@ -1,0 +1,53 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card {
+    max-width: 350px; /* Imposta la larghezza massima delle card */
+    margin: 0 auto;   /* Centra le card all'interno della colonna */
+}
+
+.card-img-top {
+    height: 300px;    /* Imposta l'altezza delle immagini */
+    object-fit: cover; /* Mantiene le proporzioni delle immagini */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn{
+    width: 150px;
+}
+
+.btn-remove{
+    width: 50px;
+}
+
+footer {
+    color: black;
+}
+
+footer>div>div>div>i {
+    font-size: 30px;
+}
+
+footer>div>div>div>ul>li {
+    list-style: none;
+}
+
+#service {
+    background-color: transparent;
+    color: black;
+    border: solid 1px black;
+}
+
+#goBack {
+    height: 50px;
+}
